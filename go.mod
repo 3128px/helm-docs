@@ -1,4 +1,4 @@
-module github.com/norwoodj/helm-docs
+module github.com/3128px/helm-docs
 
 go 1.14
 

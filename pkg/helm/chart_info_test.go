@@ -1,12 +1,13 @@
 package helm_test
 
 import (
-	"github.com/norwoodj/helm-docs/pkg/helm"
-	"github.com/spf13/viper"
-	"github.com/stretchr/testify/suite"
 	"path/filepath"
 	"regexp"
 	"testing"
+
+	"github.com/3128px/helm-docs/pkg/helm"
+	"github.com/spf13/viper"
+	"github.com/stretchr/testify/suite"
 )
 
 type ChartParsingTestSuite struct {
@@ -34,7 +35,7 @@ func (suite *ChartParsingTestSuite) TestNotFullyDocumentedChartStrictModeOn() {
 	_, err := helm.ParseChartInformation(chartPath, helm.ChartValuesDocumentationParsingConfig{
 		StrictMode: true,
 	})
-	expectedError := `values without documentation: 
+	expectedError := `values without documentation:
 controller
 controller.name
 controller.image

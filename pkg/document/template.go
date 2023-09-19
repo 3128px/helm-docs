@@ -8,12 +8,12 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/norwoodj/helm-docs/pkg/util"
+	"github.com/3128px/helm-docs/pkg/util"
 
 	"github.com/Masterminds/sprig/v3"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/norwoodj/helm-docs/pkg/helm"
+	"github.com/3128px/helm-docs/pkg/helm"
 )
 
 const defaultDocumentationTemplate = `{{ template "chart.header" . }}
