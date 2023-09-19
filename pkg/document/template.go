@@ -179,7 +179,7 @@ func getRequirementsTableTemplates() string {
 	requirementsSectionBuilder.WriteString("|------------|------|---------|")
 	requirementsSectionBuilder.WriteString("  {{- range .Dependencies }}")
 	requirementsSectionBuilder.WriteString("    {{- if .Alias }}")
-	requirementsSectionBuilder.WriteString("\n| {{ .Repository }} | {{ .Alias }}({{ .Name }}) | {{ .Version }} |")
+	requirementsSectionBuilder.WriteString("\n| [{{ .Repository }}]({{ .Repository }}) | {{ .Alias }}({{ .Name }}) | {{ .Version }} |")
 	requirementsSectionBuilder.WriteString("    {{- else }}")
 	requirementsSectionBuilder.WriteString("\n| {{ .Repository }} | {{ .Name }} | {{ .Version }} |")
 	requirementsSectionBuilder.WriteString("    {{- end }}")
